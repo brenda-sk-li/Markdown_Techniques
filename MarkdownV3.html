@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Techniques</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN for the scroll-to-top button -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2k6+4g5iM46xQJtI+W+I+4+c+C+G+6+6+Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --deep-night-blue: #000066;
+            --arctic-white: #F4F4F4;
+            --vibrant-purple: #6600FF;
+            --mango: #FFC000;
+            --bright-green: #33CC33;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--deep-night-blue);
+            color: var(--arctic-white);
+        }
+        .card {
+            background-color: var(--arctic-white);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        pre {
+            background-color: #1f2937;
+            color: #d1d5db;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, var(--mango), var(--vibrant-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8 pt-12 md:pt-20">
+    <a id="top"></a>
+    <div class="max-w-7xl mx-auto">
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-8 flex items-center justify-center gap-4">
+                <span class="gradient-text">📝 Markdown Techniques</span>
+            </h1>
+            <p class="text-lg md:text-xl text-white mt-4">
+                Markdown is a lightweight markup language that makes it easy to format plain text. You should use it to create clear, readable documents in places like documentation, forums, and read-me files. <span style="color: var(--mango); font-weight: bold;">When used in GenAI prompts, Markdown helps the model understand the desired structure and presentation, resulting in more organized and accurate responses.</span>
+            </p>
+        </header>
+
+        <!-- Markdown Cards Grid -->
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Card 1: Headings -->
+            <div class="card rounded-lg p-6 flex flex-col justify-between text-gray-900">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2" style="color: var(--vibrant-purple);">Headings</h3>
+                    <p class="mb-4" style="color: var(--deep-night-blue);">To create titles and subtitles, organizing content logically.</p>
+                </div>
+                <pre class="min-h-[120px]"><code># Main Title
+## Subtitle
+### Section</code></pre>
+            </div>
+
+            <!-- Card 2: Unordered Lists -->
+            <div class="card rounded-lg p-6 flex flex-col justify-between text-gray-900">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2" style="color: var(--vibrant-purple);">Unordered Lists</h3>
+                    <p class="mb-4" style="color: var(--deep-night-blue);">To create bulleted lists of items.</p>
+                </div>
+                <pre class="min-h-[120px]"><code>- Item 1
+- Item 2
+- Item 3</code></pre>
+            </div>
+
+            <!-- Card 3: Ordered Lists -->
+            <div class="card rounded-lg p-6 flex flex-col justify-between text-gray-900">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2" style="color: var(--vibrant-purple);">Ordered Lists</h3>
+                    <p class="mb-4" style="color: var(--deep-night-blue);">To create numbered lists of items.</p>
+                </div>
+                <pre class="min-h-[120px]"><code>1. First item
+2. Second item
+3. Third item</code></pre>
+            </div>
+
+            <!-- Card 4: Bold Text -->
+            <div class="card rounded-lg p-6 flex flex-col justify-between text-gray-900">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2" style="color: var(--vibrant-purple);">Bold Text</h3>
+                    <p class="mb-4" style="color: var(--deep-night-blue);">Use two asterisks (**) or two underscores (__) around the text to emphasize it with a strong visual weight.</p>
+                </div>
+                <pre class="min-h-[120px]"><code>**This text is bold.**
+__This is also bold.__
+
+</code></pre>
+            </div>
+
+            <!-- Card 5: Italic Text -->
+            <div class="card rounded-lg p-6 flex flex-col justify-between text-gray-900">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2" style="color: var(--vibrant-purple);">Italic Text</h3>
+                    <p class="mb-4" style="color: var(--deep-night-blue);">Use a single asterisk (*) or underscore (_) around the text to emphasize text with a softer visual cue.</p>
+                </div>
+                <pre class="min-h-[120px]"><code>*This text is italic.*
+_This is also italic._
+
+</code></pre>
+            </div>
+
+            <!-- Card 6: Links -->
+            <div class="card rounded-lg p-6 flex flex-col justify-between text-gray-900">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2" style="color: var(--vibrant-purple);">Links</h3>
+                    <p class="mb-4" style="color: var(--deep-night-blue);">To create a link, put the text you want to be clickable in square brackets ([]) and the URL in parentheses (()).</p>
+                </div>
+                <pre class="min-h-[120px]"><code>[Visit Google](https://www.google.com)
+
+
+</code></pre>
+            </div>
+
+            <!-- Card 7: Blockquotes -->
+            <div class="card rounded-lg p-6 flex flex-col justify-between text-gray-900">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2" style="color: var(--vibrant-purple);">Blockquotes</h3>
+                    <p class="mb-4" style="color: var(--deep-night-blue);">Use to highlight or quote text by adding a greater than sign (>) at the beginning of a line.</p>
+                </div>
+                <pre class="min-h-[120px]"><code>> This is a quote.
+> It can be multi-line.</code></pre>
+            </div>
+
+            <!-- Card 8: Inline Code -->
+            <div class="card rounded-lg p-6 flex flex-col justify-between text-gray-900">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2" style="color: var(--vibrant-purple);">Inline Code</h3>
+                    <p class="mb-4" style="color: var(--deep-night-blue);">To display short snippets of code or commands within a sentence, use a single backtick (`) around the code.</p>
+                </div>
+                <pre class="min-h-[120px]"><code>You can use the `print()` function in Python to display output.
+</code></pre>
+            </div>
+            
+            <!-- Card 9: Fenced Code Blocks -->
+            <div class="card rounded-lg p-6 flex flex-col justify-between text-gray-900">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2" style="color: var(--vibrant-purple);">Fenced Code Blocks</h3>
+                    <p class="mb-4" style="color: var(--deep-night-blue);">For a multi-line code block, you use three backticks (```) on a new line before and after the code. You can also specify the programming language for syntax highlighting, which is a neat feature.</p>
+                </div>
+                <pre class="min-h-[120px]"><code>```python
+print("Hello, World!")
+```</code></pre>
+            </div>
+
+            <!-- Card 10: Horizontal Rules -->
+            <div class="card rounded-lg p-6 flex flex-col justify-between text-gray-900">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2" style="color: var(--vibrant-purple);">Horizontal Rules</h3>
+                    <p class="mb-4" style="color: var(--deep-night-blue);">Use to visually separate content. You can create one with three or more hyphens (---), asterisks (***), or underscores (___) on a line by themselves.</p>
+                </div>
+                <pre class="min-h-[120px]"><code>Here's some content above the line.
+***
+And here's some content below the line.</code></pre>
+            </div>
+
+            <!-- Card 11: Strikethrough -->
+            <div class="card rounded-lg p-6 flex flex-col justify-between text-gray-900">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2" style="color: var(--vibrant-purple);">Strikethrough</h3>
+                    <p class="mb-4" style="color: var(--deep-night-blue);">To indicate text that is no longer relevant, wrap the text in two tildes (~~).</p>
+                </div>
+                <pre class="min-h-[120px]"><code>~~This is outdated.~~
+
+
+</code></pre>
+            </div>
+
+            <!-- Card 12: Images -->
+            <div class="card rounded-lg p-6 flex flex-col justify-between text-gray-900">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2" style="color: var(--vibrant-purple);">Images</h3>
+                    <p class="mb-4" style="color: var(--deep-night-blue);">To embed images: Use an exclamation mark (!) followed by the alt text in brackets and the image URL in parentheses.</p>
+                </div>
+                <pre class="min-h-[120px]"><code>![G.I. Joe logo](https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/GIJoeLogo.svg/1200px-GIJoeLogo.svg.png)
+
+
+</code></pre>
+            </div>
+            
+            <!-- Card 13: Tables (Full-width) -->
+            <div class="card rounded-lg p-6 flex flex-col justify-between text-gray-900 lg:col-span-3">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2" style="color: var(--vibrant-purple);">Tables</h3>
+                    <p class="mb-4" style="color: var(--deep-night-blue);">Creating tables in Markdown is a bit more complex, but it's very useful for organizing data. You use hyphens (-) for the header separator and vertical bars (|) to separate columns. The colons (:) in the separator line control the text alignment within the columns.</p>
+                </div>
+                <pre class="min-h-[120px]"><code>| Header 1 | Header 2 | Header 3 |
+|----------|:--------:|---------:|
+| Row 1    | Centered | Right    |
+| Row 2    | Left     | 2nd Right|
+
+|--- aligns the text to the left.
+|:---:| centers the text.
+|---:| aligns the text to the right.</code></pre>
+            </div>
+
+            <!-- Card 14: Combined Example (Full-width) -->
+            <div class="card rounded-lg p-6 flex flex-col justify-between text-gray-900 lg:col-span-3">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2" style="color: var(--vibrant-purple);">Combined Example</h3>
+                    <p class="mb-4" style="color: var(--deep-night-blue);">Here is a practical example of how you can combine multiple Markdown elements for a well-structured document.</p>
+                </div>
+                <pre class="min-h-[120px]"><code># Project Overview
+
+A project to develop a **new software application**.
+
+> "The first rule of any technology used in a business is that automation applied to an efficient operation will magnify the efficiency. The second is that automation applied to an inefficient operation will magnify the inefficiency."
+> - Bill Gates
+
+### Key Features
+1.  User authentication
+2.  Real-time data synchronization
+3.  Integration with a third-party API
+
+### Project Team
+| Name         | Role           |
+|--------------|----------------|
+| Jane Doe     | Project Manager|
+| John Smith   | Lead Developer |
+| Sally Jones  | Designer       |
+
+---
+
+For more information, please visit the [official documentation](https://www.google.com). Or for an internal link to the [Key Features](#key-features) section, click here.</code></pre>
+            </div>
+
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="mt-12 text-center text-gray-400 text-sm">
+            <p>
+                © 2025 Markdown Techniques Guide. All rights reserved.<br>
+                Created on August 5, 2025 By Brenda Li in Canada.
+            </p>
+        </footer>
+    </div>
+
+    <!-- Scroll-to-top Button -->
+    <a href="#top" id="scrollToTopBtn" class="fixed bottom-8 right-8 bg-[var(--mango)] text-[var(--deep-night-blue)] px-6 py-3 rounded-full shadow-lg transition-all duration-300 ease-in-out opacity-0 z-50">
+        <span class="font-bold">Top</span> <i class="fas fa-arrow-up ml-2"></i>
+    </a>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 200) {
+                    scrollToTopBtn.style.opacity = '1';
+                    scrollToTopBtn.style.transform = 'translateY(0)';
+                } else {
+                    scrollToTopBtn.style.opacity = '0';
+                    scrollToTopBtn.style.transform = 'translateY(20px)';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
